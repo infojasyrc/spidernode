@@ -1,0 +1,12 @@
+*.bundle.js
+
+/node_modules/
+
+# Firebase logs
+firebase-debug.log
+
+# IDE
+/.vscode/
+/.firebase/
+
+

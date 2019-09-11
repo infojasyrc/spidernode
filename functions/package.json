@@ -1,0 +1,29 @@
+{
+  "name": "event-manager-functions",
+  "description": "Cloud Functions for Event Manager application",
+  "scripts": {
+    "generate:keys:dev": "cp server/services-config/app.prod.json server/services-config/app.json && cp server/services-config/app.web.prod.json server/services-config/app.web.json",
+    "serve": "npm run generate:keys:dev && firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-multipart-file-parser": "^0.1.2",
+    "firebase": "^5.8.4",
+    "firebase-admin": "^8.5.0",
+    "firebase-functions": "^3.2.0",
+    "json2csv": "^4.4.1",
+    "morgan": "^1.9.1",
+    "uuid": "^3.3.2",
+    "xhr2": "^0.1.4"
+  },
+  "private": true,
+  "engines": {
+    "node": "8"
+  }
+}
