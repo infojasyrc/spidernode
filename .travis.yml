@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "8"
+
+install:
+  - cd functions/server
+  - npm install
+
+script:
+  - npm run test
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email:
+    - infojasyrc@gmail.com
