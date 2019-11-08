@@ -4,9 +4,8 @@
 
 # Firebase logs
 firebase-debug.log
+firestore-debug.log
 
 # IDE
 /.vscode/
 /.firebase/
-
-
