@@ -9,6 +9,9 @@
   "emulators": {
     "firestore": {
       "port": "8099"
+    },
+    "functions": {
+      "port": "5010"
     }
   }
 }
