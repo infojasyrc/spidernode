@@ -1,0 +1,3 @@
+[submodule "functions/server"]
+	path = functions/server
+	url = https://github.com/infojasyrc/chlorine.git
