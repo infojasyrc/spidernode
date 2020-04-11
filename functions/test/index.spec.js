@@ -3,24 +3,18 @@
 const test = require('ava');
 const request = require('supertest');
 
-const testFireFunctions = require('firebase-functions-test')({
-  projectId: 'spider-node-app',
-  databaseURL: 'https://spidernode-app.firebaseio.com',
-  storageBucket: 'spider-node-app.appspot.com',
-}, '../server/services-config/app.prod.json');
+//const testFireFunctions = require('firebase-functions-test')({}, '../server/services-config/app.prod.json');
 
 let myFunctions;
 
-test.beforeEach(() => {
-  myFunctions = require('./../');
-});
+test.beforeEach(() => {});
 
 test.afterEach(() => {
   // Do cleanup tasks
-  testFireFunctions.cleanup();
+  //testFireFunctions.cleanup();
 });
 
-test.serial('Check events endpoint', t => {
+test.skip('Check events endpoint', t => {
   request(myFunctions.app)
     .get('/api/events')
     .expect(200)
@@ -31,7 +25,7 @@ test.serial('Check events endpoint', t => {
     });
 });
 
-test.serial('Check access-token endpoint', t => {
+test.skip('Check access-token endpoint', t => {
   request(myFunctions.app)
     .get('/api/token/access-token')
     .expect(200)
