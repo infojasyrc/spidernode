@@ -8,8 +8,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "test": "nyc --reporter=lcov ava",
-    "test:mocha": "mocha --reporter spec"
+    "test": "mocha --reporter spec"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -37,5 +36,11 @@
     "nyc": "^15.0.1",
     "sinon": "^9.0.2",
     "supertest": "^4.0.2"
+  },
+  "mocha": {
+    "reporter": "spec",
+    "ui": "bdd",
+    "timeout": "8000",
+    "exclude": "test/utils/*.js"
   }
 }
