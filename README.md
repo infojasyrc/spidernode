@@ -22,3 +22,10 @@ For Development
 
 Create a project in firebase and generate a private key.
 This file should be moved inside functions/server/services-config/ and save it as app.prod.json
+
+Syncing with Submodule
+===
+
+```
+git submodule update --remote
+```

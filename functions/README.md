@@ -1,7 +1,7 @@
 Firebase functions Implementation
 ===
 
-This module will handle the communication between nodejs and firebase.
+This module will implement the API using express and will be hosted using Firebase functions.
 
 Dependencies
 ===
@@ -10,42 +10,40 @@ For MacOS:
 
 ```
 - brew install nvm
-- nvm install v8.15.0
+- nvm install v8.16.2
 ```
 
 For Windows:
 
 ```
 - choco install nvm
-- nvm install v8.15.0
+- nvm install v8.16.2
 ```
 
-For this application, we are using Nodejs v8.15.0. (.nvmrc)
+For this application, we are using Nodejs v8.16.2 (.nvmrc)
 
-Local Development
+Using firebase Local Development
 ===
 
-using firebase functions local emulator
+```
+- npm run serve
+- npm run shell
+```
+
+For testing firebase functions on shell
+
+Example:
 
 ```
-- firebase server
+app.get('URL')
+app.post('URL').form({"param1":"value1", "param2":"value2"})
 ```
 
-using nodejs
+[Firebase Link Reference](https://firebase.google.com/docs/functions/local-shell)
+
+Using NodeJS
+===
 
 ```
 - node server/index.js
-```
-
-Available endpoints for local development
-===
-
-using ```firebase serve```
-```
-- http://localhost:5001/event-manager-app/us-central1/api/healthcheck/
-- http://localhost:5001/event-manager-app/us-central1/api/users/
-- get http://localhost:5001/event-manager-app/us-central1/api/user/:id
-- post http://localhost:5001/event-manager-app/us-central1/api/user/
-- put http://localhost:5001/event-manager-app/us-central1/api/user/:id
-- delete http://localhost:5001/api/event-manager-app/us-central1/user/:id
 ```
