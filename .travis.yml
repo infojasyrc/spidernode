@@ -3,7 +3,7 @@ node_js:
   - "12"
 
 install:
-  - cd functions/app
+  - cd functions
   - npm install
 
 script:
