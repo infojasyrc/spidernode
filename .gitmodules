@@ -1,4 +1,4 @@
-[submodule "functions/server"]
-	path = functions/server
+[submodule "functions/app"]
+	path = functions/app
 	url = https://github.com/infojasyrc/chlorine.git
 	branch = master

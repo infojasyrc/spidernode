@@ -1,6 +1,6 @@
 'use strict';
 
 const functions = require('firebase-functions');
-const app = require('./server/app');
+const app = require('./app/app');
 
 exports.app = functions.https.onRequest(app);
